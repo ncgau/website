@@ -14,9 +14,6 @@
 		width: 75vw;
 		min-height: 100vh;
 		margin-left: 5vw;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 100px 1fr;
 	}
 	@media (max-width: 60rem) {
 		main {
