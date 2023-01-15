@@ -11,9 +11,23 @@
 		<div class="hero-header " />
 
 		<div class="text-column">
-			<h1>Attend NCGAU this app</h1>
+			<h1>Attend NCGAU</h1>
+			<p>
+				The Newcastle Coders Group runs on the first Wednesday of each month in the Newcastle CBD.
+				We provide dinner, typically pizza, and a range of alcoholic and no alcoholic drinks.
+			</p>
 
-			<p>Links and text to meetup</p>
+			<p>
+				We welcome anyone and everyone interested in software development from all backgrounds,
+				identities and skill levels. Over our 200+ meetups across more than years, we've seen our
+				fair share of students, career changers, hobbyists, seasoned developers and even CTOs.
+			</p>
+
+			<p>
+				We publish a list of our upcoming meetings on our <a
+					href="https://www.meetup.com/newcastle-coders-group/">meetup page</a
+				>. NCGAU is always free all we ask is that you RSVP to help us plan for numbers.
+			</p>
 		</div>
 	</div>
 </NavLayout>

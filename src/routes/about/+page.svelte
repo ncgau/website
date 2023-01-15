@@ -14,10 +14,10 @@
 			<h1>About NCGAU</h1>
 
 			<p>
-				Newcastle Coders’ Group is a community and meetup centred around a shared love of
-				programming, creativity and technology. On the first Wednesday of each month we gather to
-				talk tech and share a meal. Meetups are usually attended by twenty or thirty people from
-				across the Newcastle software development community
+				The Newcastle Coders Group is a volunteer run community and meetup centred around a shared
+				love of programming, creativity and technology. On the first Wednesday of each month we
+				gather to talk tech and share a meal. Meetups are usually attended by twenty or thirty
+				people from across the Newcastle software development community
 			</p>
 			<p>
 				A fixture of most meetups is a keynote talk (or two) focused on topics ranging from your
@@ -25,8 +25,8 @@
 			</p>
 			<p>
 				We welcome anyone and everyone interested in software development, from all backgrounds,
-				identities and skill levels. Over our 100+ meetups over X years we’ve seen our fair share of
-				students, career changers, hobbyists, seasoned developers and even CTOs.
+				identities and skill levels. Over our 200+ meetups across more than years we've seen our
+				fair share of students, career changers, hobbyists, seasoned developers and even CTOs.
 			</p>
 		</div>
 	</div>
