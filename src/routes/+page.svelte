@@ -1,59 +1,74 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import Card from './Card.svelte';
+	import LogoHeader from './LogoHeader.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>NCGAU</title>
+	<meta name="description" content="Newcastle coders group home page" />
 </svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<div class="header">
+	<LogoHeader />
+</div>
+<div class="grid">
+	<div class="header">
+		<h1>Newcastle Coders Group</h1>
+	</div>
+	<Card cardType="about" linkTo="/about">
+		<h2>About us</h2>
+	</Card>
+	<Card cardType="attend" linkTo="/attend">
+		<h2>Attend</h2>
+	</Card>
+	<Card cardType="speak" linkTo="/speak">
+		<h2>Speak</h2>
+	</Card>
+	<Card cardType="sponsor" linkTo="/sponsor">
+		<h2>Sponsor</h2>
+	</Card>
+	<Card cardType="host" linkTo="/host">
+		<h2>Host</h2>
+	</Card>
+	<Card cardType="help" linkTo="/help">
+		<h2>Help</h2>
+	</Card>
+</div>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
+	.grid {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100px 1fr 1fr 1fr;
+		gap: 2rem;
+		padding: 2rem;
+	}
+	.header {
+		grid-column: span 2;
+	}
+
+	h1,
+	h2 {
+		text-align: center;
+		font-family: sans-serif;
+		font-size: 3rem;
+		color: white;
 	}
 
 	h1 {
-		width: 100%;
+		color: black;
+		font-family: 'Fira Mono', monospace;
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	@media (max-width: 60rem) {
+		.grid {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			margin: 0;
+			width: 100%;
+		}
+		.header {
+			grid-column: span 1;
+		}
 	}
 </style>
