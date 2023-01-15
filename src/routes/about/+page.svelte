@@ -3,32 +3,30 @@
 </script>
 
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>About NCGAU</title>
+	<meta name="description" content="About NCGAU" />
 </svelte:head>
 <NavLayout>
 	<div class="main">
 		<div class="hero-header " />
 
 		<div class="text-column">
-			<h1>About this app</h1>
+			<h1>About NCGAU</h1>
 
 			<p>
-				This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing
-				the following into your command line and following the prompts:
+				Newcastle Coders’ Group is a community and meetup centred around a shared love of
+				programming, creativity and technology. On the first Wednesday of each month we gather to
+				talk tech and share a meal. Meetups are usually attended by twenty or thirty people from
+				across the Newcastle software development community
 			</p>
-
-			<pre>npm create svelte@latest</pre>
-
 			<p>
-				The page you're looking at is purely static HTML, with no client-side interactivity needed.
-				Because of that, we don't need to load any JavaScript. Try viewing the page's source, or
-				opening the devtools network panel and reloading.
+				A fixture of most meetups is a keynote talk (or two) focused on topics ranging from your
+				rights at work to building a music synthesiser using floppy drives.
 			</p>
-
 			<p>
-				The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling.
-				Try using it with JavaScript disabled!
+				We welcome anyone and everyone interested in software development, from all backgrounds,
+				identities and skill levels. Over our 100+ meetups over X years we’ve seen our fair share of
+				students, career changers, hobbyists, seasoned developers and even CTOs.
 			</p>
 		</div>
 	</div>
