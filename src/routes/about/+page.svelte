@@ -34,9 +34,9 @@
 
 			<p>Contact Klee on:</p>
 			<ul>
-				<li>Twitter</li>
-				<li>Linked in</li>
-				<li>Website</li>
+				<li><a href="https://twitter.com/kleeut">Twitter</a></li>
+				<li><a href="https://www.linkedin.com/in/kleeut/">Linked in</a></li>
+				<li><a href="https://www.kleeut.com">Website</a></li>
 			</ul>
 			<h3>Peter Drew (Founder)</h3>
 			<h3>John Roach</h3>
