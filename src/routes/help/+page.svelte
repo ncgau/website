@@ -12,8 +12,17 @@
 
 		<div class="text-column">
 			<h1>Help out NCGAU</h1>
+			<p>
+				The Newcastle Coders Group is a volunteer-run group, and we can always use extra help. We're
+				looking for help finding speakers, venues, and sponsors, as well as general help on meeting
+				nights to set up, pack up, and clean up.
+			</p>
 
-			<p>Content about how people can help us</p>
+			<p>
+				If you're interested in helping out reach out to the organisers through
+				<a href="https://www.meetup.com/newcastle-coders-group/">Meetup</a>, or
+				<a href="https://twitter.com/ncgau">Twitter</a>
+			</p>
 		</div>
 	</div>
 </NavLayout>

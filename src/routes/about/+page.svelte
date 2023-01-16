@@ -12,7 +12,6 @@
 
 		<div class="text-column">
 			<h1>About NCGAU</h1>
-
 			<p>
 				The Newcastle Coders Group is a volunteer run community and meetup centred around a shared
 				love of programming, creativity and technology. On the first Wednesday of each month we
@@ -28,6 +27,20 @@
 				identities and skill levels. Over our 200+ meetups across more than years we've seen our
 				fair share of students, career changers, hobbyists, seasoned developers and even CTOs.
 			</p>
+			<h2>About our organisers</h2>
+			<p>NCAGU is a volunteer-run group. Our current organisers are:</p>
+
+			<h3>Klee Thomas</h3>
+
+			<p>Contact Klee on:</p>
+			<ul>
+				<li>Twitter</li>
+				<li>Linked in</li>
+				<li>Website</li>
+			</ul>
+			<h3>Peter Drew (Founder)</h3>
+			<h3>John Roach</h3>
+			<h3>David Williams (Founder)</h3>
 		</div>
 	</div>
 </NavLayout>

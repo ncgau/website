@@ -14,8 +14,22 @@
 			<h1>Sponsor NCGAU</h1>
 
 			<p>
-				Some content about sponsoring NCGAU. What options we have and what you get for it. Add a way
-				to contact us
+				The Newcastle Coders Group is always on the lookout for sponsors to help us keep our events
+				free and ensure we can provide the best experience to our attendees. The Newcastle Coders
+				Group is a volunteer-run group, so any sponsor money goes back into the group.
+			</p>
+			<p>
+				Meetings attract 20-30 of Newcastle's most engaged software developers, so sponsoring is a
+				great way to get your message out to the group. If you supply dinner or drinks, we'll shout
+				you out at the start of the meeting and give you a 2-minute slot to get up and say your
+				piece.
+			</p>
+			<p>
+				If sponsoring dinner or drinks is not your thing consider <a href="/host"
+					>hosting a meeting</a
+				>, or get in touch with the organisers through
+				<a href="https://www.meetup.com/newcastle-coders-group/">Meetup</a>,
+				<a href="https://twitter.com/ncgau">Twitter</a> and we'll chat about alternative options.
 			</p>
 		</div>
 	</div>
