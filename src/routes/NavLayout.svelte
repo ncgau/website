@@ -4,8 +4,10 @@
 </script>
 
 <div class="main">
-	<DesktopNav />
-	<MobileNav />
+	<div>
+		<DesktopNav />
+		<MobileNav />
+	</div>
 	<slot />
 </div>
 
@@ -13,5 +15,11 @@
 	.main {
 		display: grid;
 		grid-template-rows: 50px 1fr;
+	}
+	@media (max-width: 40rem) {
+		.main {
+			display: grid;
+			grid-template-rows: 0px 1fr;
+		}
 	}
 </style>

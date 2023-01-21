@@ -6,7 +6,7 @@
 </script>
 
 <nav class={open ? 'open' : 'closed'}>
-	<button class="open" on:click={toggleNav}>+</button>
+	<button class="open" on:click={toggleNav}>{open ? '<' : '>'}</button>
 	<div class="logo" />
 	<a href="/about">About</a>
 	<a href="/attend">Attend</a>
@@ -21,12 +21,15 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-		transform: translateX(20px);
+		transform: translateX(30px) translateY(20px);
 		background-color: black;
 		padding: 1rem;
 		color: white;
 		border: 0;
 		border-radius: 5%;
+		font-size: 1.5rem;
+		font-weight: bolder;
+		box-shadow: 3px 0 3px 3px #333;
 	}
 	div.logo {
 		background-image: url('/ncgaulogo.png');
@@ -46,7 +49,7 @@
 
 		transition: transform 500ms ease;
 		display: none;
-		position: sticky;
+		position: fixed;
 		top: 0;
 		left: 0;
 	}
@@ -55,7 +58,7 @@
 		transform: translateX(0px);
 	}
 	nav.closed {
-		transform: translateX(-185px);
+		transform: translateX(-190px);
 	}
 	a {
 		color: white;
