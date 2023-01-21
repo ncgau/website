@@ -1,9 +1,11 @@
 <script>
-	import Nav from './Nav.svelte';
+	import DesktopNav from './DesktopNav.svelte';
+	import MobileNav from './MobileNav.svelte';
 </script>
 
 <div class="main">
-	<Nav />
+	<DesktopNav />
+	<MobileNav />
 	<slot />
 </div>
 

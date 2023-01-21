@@ -29,4 +29,9 @@
 	a:hover {
 		background-color: #333;
 	}
+	@media (max-width: 40rem) {
+		nav {
+			display: none;
+		}
+	}
 </style>
