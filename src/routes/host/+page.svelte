@@ -1,5 +1,6 @@
 <script>
 	import NavLayout from '../NavLayout.svelte';
+	import ContactForm from '../../components/contactForm/ContactForm.svelte';
 </script>
 
 <svelte:head>
@@ -30,6 +31,7 @@
 				<a href="https://twitter.com/ncgau">Twitter</a>
 			</p>
 		</div>
+		<ContactForm page="host" />
 	</div>
 </NavLayout>
 

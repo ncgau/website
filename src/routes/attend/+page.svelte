@@ -1,5 +1,6 @@
 <script>
 	import NavLayout from '../NavLayout.svelte';
+	import ContactForm from '../../components/contactForm/ContactForm.svelte';
 </script>
 
 <svelte:head>
@@ -29,6 +30,7 @@
 				>. NCGAU is always free all we ask is that you RSVP to help us plan for numbers.
 			</p>
 		</div>
+		<ContactForm page="attend" />
 	</div>
 </NavLayout>
 

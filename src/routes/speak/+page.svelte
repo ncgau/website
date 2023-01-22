@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import NavLayout from '../NavLayout.svelte';
+	import ContactForm from '../../components/contactForm/ContactForm.svelte';
 </script>
 
 <svelte:head>
@@ -38,6 +39,7 @@
 				the Newcastle developer community shine and want to help you with that.
 			</p>
 		</div>
+		<ContactForm page="speak" />
 	</div>
 </NavLayout>
 
