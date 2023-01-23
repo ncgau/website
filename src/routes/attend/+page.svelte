@@ -29,6 +29,7 @@
 					href="https://www.meetup.com/newcastle-coders-group/">meetup page</a
 				>. NCGAU is always free all we ask is that you RSVP to help us plan for numbers.
 			</p>
+			<p>If you have any questions about attending please reach out to us on the form below.</p>
 		</div>
 		<ContactForm page="attend" />
 	</div>

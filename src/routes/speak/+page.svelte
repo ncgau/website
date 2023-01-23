@@ -24,7 +24,9 @@
 			</p>
 			<p>
 				If you'd like to speak at the Newcastle Coders Group, please get in touch with the
-				organisers through <a href="https://www.meetup.com/newcastle-coders-group/">Meetup</a>,
+				organisers through the form below, via <a
+					href="https://www.meetup.com/newcastle-coders-group/">Meetup</a
+				>,
 				<a href="https://twitter.com/ncgau">Twitter</a> or contact Klee on
 				<a href="https://www.linkedin.com/in/kleeut/">LinkedIn</a>.
 			</p>

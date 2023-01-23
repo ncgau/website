@@ -28,9 +28,9 @@
 			<p>
 				If sponsoring dinner or drinks is not your thing consider <a href="/host"
 					>hosting a meeting</a
-				>, or get in touch with the organisers through
+				>. Get in touch with the organisers through the form below or via
 				<a href="https://www.meetup.com/newcastle-coders-group/">Meetup</a>,
-				<a href="https://twitter.com/ncgau">Twitter</a> and we'll chat about alternative options.
+				<a href="https://twitter.com/ncgau">Twitter</a> and we'll chat about sponsorship options.
 			</p>
 		</div>
 		<ContactForm page="sponsor" />

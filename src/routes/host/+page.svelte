@@ -26,7 +26,7 @@
 				make the speaker's life much easier.
 			</p>
 			<p>
-				If you'd like to host a meeting reach out to our organisers through
+				If you'd like to host a meeting reach out to our organisers using the form below or through
 				<a href="https://www.meetup.com/newcastle-coders-group/">Meetup</a>, or
 				<a href="https://twitter.com/ncgau">Twitter</a>
 			</p>
