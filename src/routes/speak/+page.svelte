@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import NavLayout from '../NavLayout.svelte';
+	import ContactForm from '../../components/contactForm/ContactForm.svelte';
 </script>
 
 <svelte:head>
@@ -23,7 +24,9 @@
 			</p>
 			<p>
 				If you'd like to speak at the Newcastle Coders Group, please get in touch with the
-				organisers through <a href="https://www.meetup.com/newcastle-coders-group/">Meetup</a>,
+				organisers through the form below, via <a
+					href="https://www.meetup.com/newcastle-coders-group/">Meetup</a
+				>,
 				<a href="https://twitter.com/ncgau">Twitter</a> or contact Klee on
 				<a href="https://www.linkedin.com/in/kleeut/">LinkedIn</a>.
 			</p>
@@ -38,6 +41,7 @@
 				the Newcastle developer community shine and want to help you with that.
 			</p>
 		</div>
+		<ContactForm page="speak" />
 	</div>
 </NavLayout>
 

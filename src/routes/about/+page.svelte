@@ -1,5 +1,6 @@
 <script>
 	import NavLayout from '../NavLayout.svelte';
+	import ContactForm from '../../components/contactForm/ContactForm.svelte';
 </script>
 
 <svelte:head>
@@ -42,6 +43,7 @@
 			<h3>John Roach</h3>
 			<h3>David Williams (Founder)</h3>
 		</div>
+		<ContactForm page="about" />
 	</div>
 </NavLayout>
 

@@ -1,5 +1,6 @@
 <script>
 	import NavLayout from '../NavLayout.svelte';
+	import ContactForm from '../../components/contactForm/ContactForm.svelte';
 </script>
 
 <svelte:head>
@@ -19,11 +20,13 @@
 			</p>
 
 			<p>
-				If you're interested in helping out reach out to the organisers through
+				If you're interested in helping out reach out to the organisers through the form below or
+				via
 				<a href="https://www.meetup.com/newcastle-coders-group/">Meetup</a>, or
 				<a href="https://twitter.com/ncgau">Twitter</a>
 			</p>
 		</div>
+		<ContactForm page="help" />
 	</div>
 </NavLayout>
 

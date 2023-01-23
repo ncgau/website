@@ -12,6 +12,7 @@
 		display: flex;
 		justify-content: space-between;
 		background-color: black;
+		height: 100%;
 	}
 	a {
 		color: white;
