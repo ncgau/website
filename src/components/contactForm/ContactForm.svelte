@@ -8,7 +8,10 @@
 	let message: string;
 	let sent = false;
 
-	async function submit(e: SubmitEvent): Promise<void> {
+	async function submit(e: Event): Promise<void> {
+		if (sent) {
+			return;
+		}
 		e.preventDefault();
 		fetch('/api/contact', {
 			method: 'post',
@@ -21,12 +24,7 @@
 				}
 			})
 		});
-		console.log({
-			name,
-			email,
-			message,
-			page
-		});
+		sent = true;
 	}
 </script>
 
@@ -36,7 +34,9 @@
 	<TextInput fieldName="Email" bind:value={email} />
 
 	<TextBoxInput fieldName="Message" bind:value={message} />
-	<button on:click={submit} type="submit">Submit</button>
+	<button on:click={submit} type="submit" class={sent ? 'sent' : ''}
+		>{sent ? 'Thank You' : 'Submit'}</button
+	>
 </form>
 
 <style>
@@ -63,5 +63,10 @@
 	}
 	button:hover {
 		background-color: #333;
+	}
+	button.sent {
+		background-color: lightgreen;
+		color: black;
+		cursor: not-allowed;
 	}
 </style>
