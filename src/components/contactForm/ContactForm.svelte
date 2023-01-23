@@ -8,7 +8,8 @@
 	let message: string;
 	let sent = false;
 
-	async function submit(): Promise<void> {
+	async function submit(e: SubmitEvent): Promise<void> {
+		e.preventDefault();
 		fetch('/api/contact', {
 			method: 'post',
 			body: JSON.stringify({
