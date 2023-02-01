@@ -10,9 +10,6 @@ type DataWrappedRequestBody = {
 	data: RequestBody;
 };
 
-const slackWebhookUrl =
-	'https://hooks.slack.com/services/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';
-
 function contactRequestToText(requestBody: RequestBody): string {
 	return (
 		`*Website Contact* \n` +
@@ -27,10 +24,19 @@ function asResponse(status: number, data: any): Response {
 	return new Response(JSON.stringify(data), { status });
 }
 
-async function POST({ request }: RequestEvent) {
+async function POST({ request, platform }: RequestEvent) {
+	const url = platform?.env?.SLACK_URL;
 	const { data } = (await request.json()) as DataWrappedRequestBody;
+	if (!url) {
+		console.log(data);
+		return asResponse(200, {
+			data: {
+				msg: 'done'
+			}
+		});
+	}
 
-	const slackResponse = await fetch(slackWebhookUrl, {
+	const slackResponse = await fetch(url, {
 		method: 'POST',
 		body: JSON.stringify({
 			text: contactRequestToText(data)

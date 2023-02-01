@@ -6,7 +6,11 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface Platform {}
+		interface Platform {
+			env?: {
+				SLACK_URL: string;
+			};
+		}
 	}
 }
 
