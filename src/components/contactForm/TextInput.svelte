@@ -1,11 +1,22 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
 	export let fieldName: string;
 	export let value: string;
+	export let required: boolean;
+
+	const updateState = () => {
+		dispatch('input', {
+			isUserTyping: true
+		});
+	};
 </script>
 
 <div>
 	<label for={`${fieldName}-id`}>{fieldName}: </label>
-	<input type="text" id={`${fieldName}-id`} bind:value />
+	<input {required} on:input={updateState} type="text" id={`${fieldName}-id`} bind:value />
 </div>
 
 <style>
