@@ -32,6 +32,10 @@
 			<p>If you have any questions about attending please reach out to us on the form below.</p>
 		</div>
 		<ContactForm page="attend" />
+
+		<footer>
+			<a href="/conduct">Code of Conduct</a>
+		</footer>
 	</div>
 </NavLayout>
 
@@ -48,5 +52,19 @@
 	}
 	.text-column {
 		padding: 2rem;
+	}
+
+	footer {
+		padding: 2rem 2rem 1rem 2rem;
+		text-decoration: none;
+		color: black;
+	}
+
+	a {
+		color: white;
+		cursor: pointer;
+	}
+	a:visited{
+ 		color: inherit;
 	}
 </style>
