@@ -32,6 +32,9 @@
 	<Card cardType="help" linkTo="/help">
 		<h2>Help</h2>
 	</Card>
+	<Card cardType="conduct" linkTo="/conduct">
+		<h2>Code of Conduct</h2>
+	</Card>
 </div>
 
 <style>

@@ -1,5 +1,4 @@
 <script>
-	import LogoHeader from './LogoHeader.svelte';
 	import './styles.css';
 </script>
 
