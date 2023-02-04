@@ -67,9 +67,9 @@
                 <li>John Roach</li>
                 <li>David Williams</li>
             </ul>
-
-            <ContactForm page="conduct"/>
 		</div>
+        
+        <ContactForm page="conduct"/>
 	</div>
 </NavLayout>
 

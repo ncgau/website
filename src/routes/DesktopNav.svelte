@@ -5,7 +5,7 @@
 	<a href="/sponsor">Sponsor</a>
 	<a href="/host">Host</a>
 	<a href="/help">Help</a>
-	<a href="/conduct">Code of Conduct</a>
+	<a href="/code-of-conduct">Code of Conduct</a>
 </nav>
 
 <style>

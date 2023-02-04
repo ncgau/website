@@ -41,11 +41,8 @@
 				the Newcastle developer community shine and want to help you with that.
 			</p>
 		</div>
-		<ContactForm page="speak" />
 
-		<footer>
-			<a href="/conduct">Code of Conduct</a>
-		</footer>
+		<ContactForm page="speak" />
 	</div>
 </NavLayout>
 
@@ -63,19 +60,5 @@
 	}
 	.text-column {
 		padding: 2rem;
-	}
-	
-	footer {
-		padding: 2rem 2rem 1rem 2rem;
-		text-decoration: none;
-		color: black;
-	}
-
-	a {
-		color: white;
-		cursor: pointer;
-	}
-	a:visited{
- 		color: inherit;
 	}
 </style>
