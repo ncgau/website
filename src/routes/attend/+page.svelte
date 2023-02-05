@@ -31,6 +31,7 @@
 			</p>
 			<p>If you have any questions about attending please reach out to us on the form below.</p>
 		</div>
+
 		<ContactForm page="attend" />
 	</div>
 </NavLayout>

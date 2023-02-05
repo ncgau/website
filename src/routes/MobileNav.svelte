@@ -14,6 +14,7 @@
 	<a href="/sponsor">Sponsor</a>
 	<a href="/host">Host</a>
 	<a href="/help">Help</a>
+	<a href="/code-of-conduct">Code of Conduct</a>
 </nav>
 
 <style>
@@ -74,6 +75,7 @@
 		text-decoration: none;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
+		text-align:center;
 	}
 	a:hover {
 		background-color: #333;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let cardType: 'host' | 'speak' | 'sponsor' | 'attend' | 'help' | 'about';
+	export let cardType: 'host' | 'speak' | 'sponsor' | 'attend' | 'help' | 'about' | 'conduct';
 	export let linkTo: string;
 </script>
 
@@ -40,6 +40,9 @@
 	}
 	.about__background {
 		background-image: url(/about.webp);
+	}
+	.conduct__background {
+		background-image: url(/conduct.webp);
 	}
 	.card {
 		display: block;
