@@ -7,25 +7,23 @@
 
 	let formSent = false;
 	let showErrorMessage = false;
-	let duration = 1000;
 
 	let nameFormItem = {
 		fieldName: 'Name',
 		value: '',	
+		errorMessage: 'Please tell us who you are.'
 	}
 
 	let emailFormItem = {
 		fieldName: 'Email',
 		value: '',
+		errorMessage: 'Please let us know how to contact you.',
 	}
 
 	let messageFormItem = {
 		fieldName: 'Message',
 		value: '',
 	}
-
-	let nameErrorMessage = 'Please tell us who you are.';
-	let emailErrorMessage = 'Please let us know how to contact you.'
 
 	const handleInput = () => showErrorMessage = false;
 
@@ -74,25 +72,15 @@
 
 	<TextInput
 	on:input={handleInput}
+	showErrorMessage={showErrorMessage}
 	{...nameFormItem}
 	/>
 	
-	{#if showErrorMessage}
-		<p class="required-message" transition:fade="{{ duration }}">
-			{nameErrorMessage}
-		</p>
-	{/if}
-
 	<TextInput
 	on:input={handleInput}
+	showErrorMessage={showErrorMessage}
 	{...emailFormItem}
 	/>
-
-	{#if showErrorMessage}
-		<p class="required-message" transition:fade="{{ duration }}">
-			{emailErrorMessage}
-		</p>
-	{/if}
 
 	<TextBoxInput {...messageFormItem} />
 
@@ -130,11 +118,5 @@
 		background-color: lightgreen;
 		color: black;
 		cursor: not-allowed;
-	}
-	.required-message {
-		margin: 0;
-		padding: 1rem 0rem 1rem 1rem;
-		color: #6b0000;
-		border: 2px solid #6b0000;
 	}
 </style>
