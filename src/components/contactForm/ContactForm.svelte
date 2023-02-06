@@ -1,136 +1,104 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 	import TextBoxInput from './TextBoxInput.svelte';
 	import TextInput from './TextInput.svelte';
 
 	export let page: string;
 
-	enum FormType {
-		INPUT,
-		TEXTBOX
+	let formSent = false;
+	let showErrorMessage = false;
+	let duration = 1000;
+
+	let nameFormItem = {
+		fieldName: 'Name',
+		value: '',	
 	}
 
-	type FormItem = {
-		formType: FormType;
-		fieldName: string;
-		itemValue: string;
-		isInputValid: boolean;
-		required: boolean;
-	};
-
-	let nameFormItem: FormItem = {
-		formType: FormType.INPUT,
-		fieldName: 'Name',
-		itemValue: '',
-		isInputValid: false,
-		required: true
-	};
-
-	let emailFormItem: FormItem = {
-		formType: FormType.INPUT,
+	let emailFormItem = {
 		fieldName: 'Email',
-		itemValue: '',
-		isInputValid: false,
-		required: true
-	};
+		value: '',
+	}
 
-	let messageFormItem: FormItem = {
-		formType: FormType.TEXTBOX,
+	let messageFormItem = {
 		fieldName: 'Message',
-		itemValue: '',
-		isInputValid: false,
-		required: false
-	};
+		value: '',
+	}
 
-	let formItems = [nameFormItem, emailFormItem, messageFormItem];
+	let nameErrorMessage = 'Please tell us who you are.';
+	let emailErrorMessage = 'Please let us know how to contact you.'
 
-	let sent = false;
-	let isFormValid = true;
-	let errorMessage = '';
-	let isUserTyping: boolean;
+	const handleInput = () => showErrorMessage = false;
 
-	const validateInput = (value: string) => {
-		return value !== undefined && value.length > 0;
-	};
-
-	const generateErrorMessage = () => {
-		let invalidItems = formItems.filter((item) => !item.isInputValid && item.required);
-		let invalidNames = invalidItems.map((item) => item.fieldName).join(' and ');
-
-		errorMessage = `Invalid or no input for ${invalidNames}`;
-	};
-
+	const validateInput = (value: string) => value !== undefined && value.length > 0;
+	
 	const validateForm = () => {
-		// accumulates the result of validateFormItem for each required formItem
-		isFormValid = formItems.reduce((acc, formItem) => {
-			if (formItem.required) {
-				formItem.isInputValid = validateInput(formItem.itemValue);
-				return acc && formItem.isInputValid;
-			}
-			return acc;
-		}, true);
+		let isValidEmail = validateInput(emailFormItem.value);
+		let isValidName = validateInput(nameFormItem.value);
+
+		return isValidEmail && isValidName;
 	};
 
 	const sendFormData = async () => {
-		if (!sent) {
+		if (!formSent) {
 			fetch('/api/contact', {
 				method: 'post',
 				body: JSON.stringify({
 					data: {
-						name: nameFormItem.itemValue,
-						email: emailFormItem.itemValue,
-						message: messageFormItem.itemValue,
+						name: nameFormItem.value,
+						email: emailFormItem.value,
+						message: messageFormItem.value,
 						page
 					}
 				})
 			});
-			sent = true;
+			formSent = true;
 		}
 	};
 
 	async function submit(e: Event): Promise<void> {
-		isUserTyping = !isUserTyping;
-		validateForm();
-
-		if (!isFormValid) {
-			return generateErrorMessage();
+		let isFormValid = validateForm();
+		
+		if(!isFormValid) {
+			showErrorMessage = true;
+			return;
 		}
-
-		if (!sent) {
-			e.preventDefault();
-			await sendFormData();
-		}
+			
+		if (!formSent) {
+			return await sendFormData();
+		} 
 	}
-
-	const handleInput = (e: CustomEvent) => {
-		isUserTyping = e.detail.isUserTyping;
-	};
 </script>
 
 <form on:submit={submit}>
 	<h3>Contact us</h3>
 
-	{#each formItems as formItem}
-		{#if formItem.formType === FormType.INPUT}
-			<TextInput
-				on:input={handleInput}
-				required={formItem.required}
-				fieldName={formItem.fieldName}
-				bind:value={formItem.itemValue}
-			/>
-		{/if}
-
-		{#if formItem.formType === FormType.TEXTBOX}
-			<TextBoxInput fieldName="Message" bind:value={formItem.itemValue} />
-		{/if}
-	{/each}
-
-	{#if !isUserTyping && !isFormValid}
-		<p class={!isFormValid ? 'error' : 'error__hide'}>{errorMessage}</p>
+	<TextInput
+	on:input={handleInput}
+	{...nameFormItem}
+	/>
+	
+	{#if showErrorMessage}
+		<p class="required-message" transition:fade="{{ duration }}">
+			{nameErrorMessage}
+		</p>
 	{/if}
 
-	<button on:click={submit} type="submit" class={sent ? 'sent' : ''}
-		>{sent ? 'Thank You' : 'Submit'}</button
-	>
+	<TextInput
+	on:input={handleInput}
+	{...emailFormItem}
+	/>
+
+	{#if showErrorMessage}
+		<p class="required-message" transition:fade="{{ duration }}">
+			{emailErrorMessage}
+		</p>
+	{/if}
+
+	<TextBoxInput {...messageFormItem} />
+
+	<button on:click|preventDefault={submit} type="submit" class={formSent ? 'sent' : ''}>
+		{formSent ? 'Thank You' : 'Submit'}
+	</button>
 </form>
 
 <style>
@@ -163,17 +131,10 @@
 		color: black;
 		cursor: not-allowed;
 	}
-
-	.error {
-		display: block;
-		background-color: crimson;
-		border-radius: 5px;
-		text-align: center;
-		max-width: 50%;
-		width: max-content;
-		padding: 5px;
-	}
-	.error__hide {
-		display: none;
+	.required-message {
+		margin: 0;
+		padding: 1rem 0rem 1rem 1rem;
+		color: #6b0000;
+		border: 2px solid #6b0000;
 	}
 </style>

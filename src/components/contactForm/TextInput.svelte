@@ -5,7 +5,6 @@
 
 	export let fieldName: string;
 	export let value: string;
-	export let required: boolean;
 
 	const updateState = () => {
 		dispatch('input', {
@@ -16,7 +15,7 @@
 
 <div>
 	<label for={`${fieldName}-id`}>{fieldName}: </label>
-	<input {required} on:input={updateState} type="text" id={`${fieldName}-id`} bind:value />
+	<input id={`${fieldName}-id`} on:input|preventDefault={updateState} type="text" bind:value />
 </div>
 
 <style>
