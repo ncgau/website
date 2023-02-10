@@ -29,7 +29,7 @@
 			<p>
 				As a community of proffesionals we constantly strive for perfection. So please, if you encounter
 				any errors with this website, or see areas where we can improve, you can create a new issue <a href="https://github.com/ncgau/website/issues">here</a>.
-				If you'd like to help out you can also submit a <a href="">pull request</a>.
+				If you'd like to help out you can also submit a <a href="https://github.com/ncgau/website/pulls">pull request</a>.
 			</p>
 		</div>
 		<ContactForm page="help" />
