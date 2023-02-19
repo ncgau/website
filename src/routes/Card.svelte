@@ -1,72 +1,54 @@
 <script lang="ts">
-	export let cardType: 'host' | 'speak' | 'sponsor' | 'attend' | 'help' | 'about' | 'conduct';
-	export let linkTo: string;
+	export let directory : string
+	export let title : string = directory;
+	let capitalLetter = title.charAt(0).toUpperCase();
+	title = `${capitalLetter}${title.substring(1)}`;
 </script>
 
-<a href={linkTo} class="card {cardType}__background">
-	<div class="dark-overlay">
-		<slot />
+<a href={`/${directory}`}>
+	<div class="image-wrapper">
+			<h2>{title}</h2>
+			<div class="vignette"></div>
+		<slot></slot>
 	</div>
 </a>
 
 <style>
-	.dark-overlay {
+
+
+
+	.image-wrapper, .vignette {
 		height: 100%;
 		width: 100%;
-		background-color: rgba(0, 0, 0, 0.3);
-		background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+	}
+	.vignette {
 		position: absolute;
-		top: 0;
-		left: 0;
 	}
-
-	.sponsor__background {
-		background-image: url(/sponsor.webp);
-	}
-
-	.host__background {
-		background-image: url(/host.webp);
-	}
-
-	.speak__background {
-		background-image: url(/speak.webp);
-	}
-
-	.attend__background {
-		background-image: url(/attend.webp);
-	}
-	.help__background {
-		background-image: url(/help.webp);
-	}
-	.about__background {
-		background-image: url(/about.webp);
-	}
-	.conduct__background {
-		background-image: url(/conduct.webp);
-	}
-	.card {
-		display: block;
-		background-color: black;
+	.vignette {
+		background: radial-gradient(circle,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+		z-index: 1;
+		opacity: 0.6;
 		border-radius: 1rem;
-		padding: 1rem;
-		transition: opacity 500ms ease;
-		opacity: 0.8;
-		color: white;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-		overflow: hidden;
-		cursor: pointer;
-		min-height: 15rem;
-		padding: 1rem;
-		word-break: break-word;
+		transition: opacity .5s ease;
+		height: 15rem;
+		display: flex;
+		justify-content: center;
 	}
-	.card:hover {
+	.vignette:hover { 
 		opacity: 1;
 	}
-	@media (max-width: 40rem) {
-		.card {
-			opacity: 1;
-		}
+	.image-wrapper > h2 {
+		text-shadow: 0px 3px black;
+		font-size: 3rem;
+		z-index: 2;
+		color: white;
+		position: absolute;
+		text-align: center;
+		word-break: break-word;
+	}
+	.image-wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
 	}
 </style>

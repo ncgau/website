@@ -1,6 +1,7 @@
 <script>
 	import NavLayout from '../NavLayout.svelte';
 	import ContactForm from '../../components/contactForm/ContactForm.svelte';
+	import Image from 'svimg';
 </script>
 
 <svelte:head>
@@ -9,6 +10,7 @@
 </svelte:head>
 <NavLayout>
 	<div class="main">
+		<Image src='attend.webp' width=900 class='banner-image'/>
 		<div class="hero-header " />
 
 		<div class="text-column">
@@ -40,12 +42,6 @@
 	.main {
 		display: grid;
 		grid-template-rows: 200px 1fr;
-	}
-	.hero-header {
-		background-image: url(/attend.webp);
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 100%;
 	}
 	.text-column {
 		padding: 2rem;

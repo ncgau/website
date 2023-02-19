@@ -1,4 +1,5 @@
 <script>
+	import Image from 'svimg'
 	import NavLayout from '../NavLayout.svelte';
 	import ContactForm from '../../components/contactForm/ContactForm.svelte';
 </script>
@@ -9,8 +10,7 @@
 </svelte:head>
 <NavLayout>
 	<div class="main">
-		<div class="hero-header " />
-
+		<Image src="about.webp" width=900 class="banner-image"/>
 		<div class="text-column">
 			<h1>About NCGAU</h1>
 			<p>
@@ -51,13 +51,6 @@
 	.main {
 		display: grid;
 		grid-template-rows: 200px 1fr;
-	}
-	.hero-header {
-		background-image: url(/about.webp);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		height: 100%;
 	}
 	.text-column {
 		padding: 2rem;

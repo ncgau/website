@@ -10,6 +10,8 @@
 
 <style>
 	nav {
+		top: 0px;
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		background-color: black;
@@ -18,7 +20,7 @@
 	a {
 		color: white;
 		width: 100%;
-
+		text-align: center;
 		display: flex;
 		align-items: center;
 		justify-content: center;

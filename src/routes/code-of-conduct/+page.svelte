@@ -1,6 +1,7 @@
 <script>
 	import ContactForm from '../../components/contactForm/ContactForm.svelte';
 	import NavLayout from '../NavLayout.svelte';
+    import Image from 'svimg';
 </script>
 
 <svelte:head>
@@ -9,8 +10,7 @@
 </svelte:head>
 <NavLayout>
 	<div class="main">
-		<div class="hero-header" />
-
+        <Image src="conduct.webp" width=900 class="banner-image"/>
 		<div class="text-column">
 			<h1>Code of Conduct</h1>
             <p><strong>Newcastle Coders Group</strong> should be a safe place for everybody regardless of</p>
@@ -73,18 +73,12 @@
 	</div>
 </NavLayout>
 
-<style>
+<style global>
 	.main {
 		display: grid;
 		grid-template-rows: 200px 1fr;
 	}
-	.hero-header {
-		background-image: url(/conduct.webp);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		height: 100%;
-	}
+
 	.text-column {
 		padding: 2rem;
 	}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Image from 'svimg';
 	import Card from './Card.svelte';
 	import LogoHeader from './LogoHeader.svelte';
 </script>
@@ -14,30 +15,34 @@
 	<div class="header">
 		<h1>Newcastle Coders Group</h1>
 	</div>
-	<Card cardType="about" linkTo="/about">
-		<h2>About us</h2>
+	<Card title="about us" directory="about">
+		<Image src='about.webp' class="card-image" width=700/>
 	</Card>
-	<Card cardType="attend" linkTo="/attend">
-		<h2>Attend</h2>
+
+	<Card directory="attend">
+		<Image src="attend.webp" class="card-image" width=700/>
 	</Card>
-	<Card cardType="speak" linkTo="/speak">
-		<h2>Speak</h2>
+	<Card directory="speak">
+		<Image src="speak.webp" class="card-image" width=700/>
 	</Card>
-	<Card cardType="sponsor" linkTo="/sponsor">
-		<h2>Sponsor</h2>
+	<Card directory="sponsor">
+		<Image src="sponsor.webp" class="card-image" width=700/>
 	</Card>
-	<Card cardType="host" linkTo="/host">
-		<h2>Host</h2>
+
+	<Card directory="host">
+		<Image src="host.webp" class="card-image" width=700/> 
 	</Card>
-	<Card cardType="help" linkTo="/help">
-		<h2>Help</h2>
+
+	<Card directory="help">
+		<Image src="help.webp" class="card-image" width=700/>
 	</Card>
-	<Card cardType="conduct" linkTo="/code-of-conduct">
-		<h2>Code of Conduct</h2>
+	<Card title="code of conduct" directory="code-of-conduct">
+		<Image src="conduct.webp" class="card-image" width=700/>
 	</Card>
+
 </div>
 
-<style>
+<style>	
 	.grid {
 		width: 100%;
 		display: grid;
@@ -49,20 +54,12 @@
 	.header {
 		grid-column: span 2;
 	}
-
-	h1,
-	h2 {
-		text-align: center;
-		font-family: sans-serif;
-		font-size: 3rem;
-		color: white;
-	}
-
 	h1 {
 		color: black;
+		text-align: center;
+		font-size: 3rem;
 		font-family: 'Fira Mono', monospace;
 	}
-
 	@media (max-width: 60rem) {
 		.grid {
 			grid-template-columns: 1fr;
