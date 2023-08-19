@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
 	import TextBoxInput from './TextBoxInput.svelte';
 	import TextInput from './TextInput.svelte';
 
@@ -10,28 +9,28 @@
 
 	let nameFormItem = {
 		fieldName: 'Name',
-		value: '',	
+		value: '',
 		errorMessage: 'Please tell us who you are.'
-	}
+	};
 
 	let emailFormItem = {
 		fieldName: 'Email',
 		value: '',
-		errorMessage: 'Please let us know how to contact you.',
-	}
+		errorMessage: 'Please let us know how to contact you.'
+	};
 
 	let messageFormItem = {
 		fieldName: 'Message',
-		value: '',
-	}
+		value: ''
+	};
 
-	const handleInput = () => showErrorMessage = false;
+	const handleInput = () => (showErrorMessage = false);
 
 	const validateInput = (value: string) => value !== undefined && value.length > 0;
-	
+
 	const validateForm = () => {
-		let isValidEmail = validateInput(emailFormItem.value);
-		let isValidName = validateInput(nameFormItem.value);
+		const isValidEmail = validateInput(emailFormItem.value);
+		const isValidName = validateInput(nameFormItem.value);
 
 		return isValidEmail && isValidName;
 	};
@@ -55,15 +54,15 @@
 
 	async function submit(e: Event): Promise<void> {
 		let isFormValid = validateForm();
-		
-		if(!isFormValid) {
+
+		if (!isFormValid) {
 			showErrorMessage = true;
 			return;
 		}
-			
+
 		if (!formSent) {
 			return await sendFormData();
-		} 
+		}
 	}
 </script>
 
@@ -71,18 +70,20 @@
 	<h3>Contact us</h3>
 
 	<TextInput
-	on:input={handleInput}
-	showErrorMessage={showErrorMessage}
-	{...nameFormItem}
-	/>
-	
-	<TextInput
-	on:input={handleInput}
-	showErrorMessage={showErrorMessage}
-	{...emailFormItem}
+		on:input={handleInput}
+		{showErrorMessage}
+		{...nameFormItem}
+		bind:value={nameFormItem.value}
 	/>
 
-	<TextBoxInput {...messageFormItem} />
+	<TextInput
+		on:input={handleInput}
+		{showErrorMessage}
+		{...emailFormItem}
+		bind:value={emailFormItem.value}
+	/>
+
+	<TextBoxInput {...messageFormItem} bind:value={messageFormItem.value} />
 
 	<button on:click|preventDefault={submit} type="submit" class={formSent ? 'sent' : ''}>
 		{formSent ? 'Thank You' : 'Submit'}
