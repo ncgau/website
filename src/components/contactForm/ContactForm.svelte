@@ -53,6 +53,7 @@
 	};
 
 	async function submit(e: Event): Promise<void> {
+		e.preventDefault();
 		let isFormValid = validateForm();
 
 		if (!isFormValid) {
