@@ -41,6 +41,7 @@
 			</ul>
 			<h3>Peter Drew (Founder)</h3>
 			<h3>John Roach</h3>
+			<h3>Alannah Davidson</h3>
 			<h3>David Williams (Founder)</h3>
 		</div>
 		<ContactForm page="about" />
