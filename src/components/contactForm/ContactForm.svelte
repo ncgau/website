@@ -68,7 +68,7 @@
 </script>
 
 <form on:submit={submit}>
-	<h3>Contact us</h3>
+	<a id="contact_us"><h3>Contact us</h3></a>
 
 	<TextInput
 		on:input={handleInput}
